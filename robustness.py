@@ -6,10 +6,17 @@ Compares the final run (results/, citation/identifier pages removed) with the ea
 """
 import json
 
+import pandas as pd
+
 import config
 
 BEFORE = config.ROOT / "results_with_citation_pages" / "metrics.json"
 AFTER = config.RESULTS_DIR / "metrics.json"
+
+
+def top10(path):
+    df = pd.read_csv(path, index_col="title")
+    return list(df["pagerank"].nlargest(10).index)
 
 
 def main():
@@ -27,6 +34,9 @@ def main():
             m: {"with_citation_pages": b["models"][m]["spearman_navigation"],
                 "without_citation_pages": a["models"][m]["spearman_navigation"]}
             for m in a["models"]},
+        "pagerank_top10": {
+            "with_citation_pages": top10(config.ROOT / "results_with_citation_pages" / "rankings.csv"),
+            "without_citation_pages": top10(config.RESULTS_DIR / "rankings.csv")},
         "beta_sweep_spearman_navigation": {
             "with_citation_pages": b["beta_sweep_spearman_navigation"],
             "without_citation_pages": a["beta_sweep_spearman_navigation"]},

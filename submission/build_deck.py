@@ -165,7 +165,7 @@ box(s, 0.8, 4.45, 7.2, 1.95)
 text(s, [[("Kshant Carvalho", {"bold": True, "size": 22})],
          "Roll No 10232 · Group 2",
          "BE Computer Engineering · Sem VII · AY 2026-27",
-         "Guide: [GUIDE NAME]"], 1.05, 4.6, 6.8, 1.7, size=16, color=WHITE)
+         "Guide: Prof. Ankita Amburle"], 1.05, 4.6, 6.8, 1.7, size=16, color=WHITE)
 text(s, ["Fr. Conceicao Rodrigues College", "of Engineering (FRCRCE)", "Bandra, Mumbai"],
      8.4, 4.6, 4.6, 1.5, size=15, color=MUTED)
 notes(s, "Hi, I'm Kshant Carvalho, roll number 10232. My BDA mini project asks one question: does Wikipedia's "

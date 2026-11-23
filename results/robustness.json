@@ -44,6 +44,32 @@
       "without_citation_pages": 0.9168
     }
   },
+  "pagerank_top10": {
+    "with_citation_pages": [
+      "Digital_object_identifier",
+      "ISBN",
+      "ISSN",
+      "PubMed",
+      "Semantic_Scholar",
+      "Wayback_Machine",
+      "PubMed_Central",
+      "Bibcode",
+      "OCLC",
+      "United_States"
+    ],
+    "without_citation_pages": [
+      "United_States",
+      "The_New_York_Times",
+      "Association_football",
+      "The_Guardian",
+      "BBC_News",
+      "Canada",
+      "France",
+      "World_War_II",
+      "United_Kingdom",
+      "Mexico"
+    ]
+  },
   "beta_sweep_spearman_navigation": {
     "with_citation_pages": {
       "0.50": 0.1836,
