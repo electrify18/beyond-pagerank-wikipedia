@@ -5,7 +5,7 @@ BDA Mini Project (CSL702 · Experiments 11 + 12) · FRCRCE · Computer Engineeri
 
 ![Dashboard: PageRank's top 10 vs where fans actually clicked](submission/screenshots/01_leaderboards.png)
 
-**Live demo:** [LIVE DEMO LINK — add after deploying on Streamlit Community Cloud](#)
+**Live demo:** [beyond-pagerank.streamlit.app](https://beyond-pagerank.streamlit.app/)
 
 **Author:** Kshant Carvalho · Roll No 10232 · Group 2 · BE Computer Engineering, Sem VII (AY 2026-27)
 Fr. Conceicao Rodrigues College of Engineering (FRCRCE), Bandra, Mumbai · Guide: Prof. Ankita Amburle
