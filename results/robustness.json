@@ -1,0 +1,61 @@
+{
+  "description": "Spearman rho vs test-month navigation, with and without citation/identifier pages",
+  "train_month": "2026-06",
+  "test_month": "2026-07",
+  "removed_pages": [
+    "Bibcode",
+    "Digital_object_identifier",
+    "Geographic_coordinate_system",
+    "Handle_System",
+    "ISBN",
+    "ISSN",
+    "JSTOR",
+    "OCLC",
+    "PubMed",
+    "PubMed_Central",
+    "Semantic_Scholar",
+    "Wayback_Machine"
+  ],
+  "with_citation_pages": {
+    "nodes": 2505,
+    "edges": 306975
+  },
+  "without_citation_pages": {
+    "nodes": 2493,
+    "edges": 301372
+  },
+  "nodes_removed": 12,
+  "edges_removed": 5603,
+  "spearman_navigation": {
+    "PageRank": {
+      "with_citation_pages": 0.1559,
+      "without_citation_pages": 0.1605
+    },
+    "Click-weighted PageRank": {
+      "with_citation_pages": 0.677,
+      "without_citation_pages": 0.6851
+    },
+    "In-degree": {
+      "with_citation_pages": 0.3196,
+      "without_citation_pages": 0.3343
+    },
+    "Last month's clicks": {
+      "with_citation_pages": 0.9178,
+      "without_citation_pages": 0.9168
+    }
+  },
+  "beta_sweep_spearman_navigation": {
+    "with_citation_pages": {
+      "0.50": 0.1836,
+      "0.70": 0.172,
+      "0.85": 0.1559,
+      "0.95": 0.1416
+    },
+    "without_citation_pages": {
+      "0.50": 0.1894,
+      "0.70": 0.1758,
+      "0.85": 0.1605,
+      "0.95": 0.147
+    }
+  }
+}

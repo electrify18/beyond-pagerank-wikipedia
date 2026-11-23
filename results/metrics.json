@@ -1,0 +1,91 @@
+{
+  "train_month": "2026-06",
+  "test_month": "2026-07",
+  "models": {
+    "PageRank": {
+      "spearman_navigation": 0.1605,
+      "top10_navigation": 0,
+      "ndcg10_navigation": 0.0579,
+      "spearman_attention": 0.3159,
+      "top10_attention": 0,
+      "ndcg10_attention": 0.085
+    },
+    "Click-weighted PageRank": {
+      "spearman_navigation": 0.6851,
+      "top10_navigation": 2,
+      "ndcg10_navigation": 0.5659,
+      "spearman_attention": 0.6851,
+      "top10_attention": 1,
+      "ndcg10_attention": 0.4781
+    },
+    "In-degree": {
+      "spearman_navigation": 0.3343,
+      "top10_navigation": 2,
+      "ndcg10_navigation": 0.3595,
+      "spearman_attention": 0.3383,
+      "top10_attention": 2,
+      "ndcg10_attention": 0.3225
+    },
+    "Last month's clicks": {
+      "spearman_navigation": 0.9168,
+      "top10_navigation": 7,
+      "ndcg10_navigation": 0.9774,
+      "spearman_attention": 0.7311,
+      "top10_attention": 3,
+      "ndcg10_attention": 0.5957
+    }
+  },
+  "beta_sweep_spearman_navigation": {
+    "0.50": 0.1894,
+    "0.70": 0.1758,
+    "0.85": 0.1605,
+    "0.95": 0.147
+  },
+  "graph": {
+    "seed": "2026_FIFA_World_Cup",
+    "hop1": 1059,
+    "hop2": 1455,
+    "nodes": 2493,
+    "edges": 301372,
+    "hop2_min_inlinks": 8,
+    "built": "2026-11-05 21:17",
+    "mock": false,
+    "minutes": 93.3,
+    "excluded": [
+      "Bibcode",
+      "Digital_object_identifier",
+      "Geographic_coordinate_system",
+      "Handle_System",
+      "ISBN",
+      "ISSN",
+      "JSTOR",
+      "OCLC",
+      "PubMed",
+      "PubMed_Central",
+      "Semantic_Scholar",
+      "Wayback_Machine"
+    ]
+  },
+  "clickstream": {
+    "2026-06": {
+      "month": "2026-06",
+      "rows_scanned": 34062948,
+      "rows_kept": 493501,
+      "articles_with_clicks": 2450,
+      "edges_with_clicks": 89996,
+      "total_clicks_in_subgraph": 300712982,
+      "seconds": 30.1
+    },
+    "2026-07": {
+      "month": "2026-07",
+      "rows_scanned": 34399047,
+      "rows_kept": 517150,
+      "articles_with_clicks": 2461,
+      "edges_with_clicks": 92484,
+      "total_clicks_in_subgraph": 334871656,
+      "seconds": 31.2
+    }
+  },
+  "edges_with_train_clicks": 87741,
+  "analysis_seconds": 35.4
+}

@@ -1,0 +1,77 @@
+{
+  "train_month": "2026-06",
+  "test_month": "2026-07",
+  "models": {
+    "PageRank": {
+      "spearman_navigation": 0.1559,
+      "top10_navigation": 0,
+      "ndcg10_navigation": 0.0079,
+      "spearman_attention": 0.3049,
+      "top10_attention": 0,
+      "ndcg10_attention": 0.0183
+    },
+    "Click-weighted PageRank": {
+      "spearman_navigation": 0.677,
+      "top10_navigation": 2,
+      "ndcg10_navigation": 0.5659,
+      "spearman_attention": 0.6804,
+      "top10_attention": 1,
+      "ndcg10_attention": 0.4781
+    },
+    "In-degree": {
+      "spearman_navigation": 0.3196,
+      "top10_navigation": 2,
+      "ndcg10_navigation": 0.3465,
+      "spearman_attention": 0.3315,
+      "top10_attention": 2,
+      "ndcg10_attention": 0.3064
+    },
+    "Last month's clicks": {
+      "spearman_navigation": 0.9178,
+      "top10_navigation": 7,
+      "ndcg10_navigation": 0.9774,
+      "spearman_attention": 0.7308,
+      "top10_attention": 3,
+      "ndcg10_attention": 0.5957
+    }
+  },
+  "beta_sweep_spearman_navigation": {
+    "0.50": 0.1836,
+    "0.70": 0.172,
+    "0.85": 0.1559,
+    "0.95": 0.1416
+  },
+  "graph": {
+    "seed": "2026_FIFA_World_Cup",
+    "hop1": 1059,
+    "hop2": 1455,
+    "nodes": 2505,
+    "edges": 306975,
+    "hop2_min_inlinks": 8,
+    "built": "2026-11-05 21:17",
+    "mock": false,
+    "minutes": 93.3
+  },
+  "clickstream": {
+    "2026-06": {
+      "month": "2026-06",
+      "rows_scanned": 34062948,
+      "rows_kept": 494606,
+      "articles_with_clicks": 2462,
+      "edges_with_clicks": 90041,
+      "total_clicks_in_subgraph": 300945553,
+      "seconds": 29.2
+    },
+    "2026-07": {
+      "month": "2026-07",
+      "rows_scanned": 34399047,
+      "rows_kept": 518332,
+      "articles_with_clicks": 2473,
+      "edges_with_clicks": 92518,
+      "total_clicks_in_subgraph": 335115876,
+      "seconds": 29.2
+    }
+  },
+  "edges_with_train_clicks": 87786,
+  "analysis_seconds": 37.4
+}

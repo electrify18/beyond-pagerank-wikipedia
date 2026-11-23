@@ -1,0 +1,10 @@
+# raw data and caches are large (~1 GB clickstream, ~100 MB API cache): rebuild with run_all.py
+data/
+.venv/
+__pycache__/
+*.pyc
+# results/ IS committed: the dashboard reads only these files, so it can be hosted without data/
+# Office lock files
+~$*
+# temporary crops written by submission/build_deck.py
+submission/figures/_*.png
