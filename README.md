@@ -73,7 +73,7 @@ python run_all.py            # 2. real pipeline: crawl + download + MapReduce + 
 python filter_graph.py       # 3. remove citation/identifier pages from the graph (no re-crawl)
 python -c "import step2_clickstream as s2, step3_analysis as s3; s2.main(['2026-06','2026-07'], skip_download=True); s3.main('2026-06','2026-07')"
                              # 4. re-run MapReduce + analysis on the filtered graph (~2 min)
-streamlit run app.py         # 5. dashboard opens in your browser
+streamlit run app.py         # 5. then open http://localhost:8501 (the browser no longer opens automatically)
 ```
 
 **To reproduce the reported results from the existing data** (no crawl, ~2 min): copy the three files in
@@ -81,7 +81,7 @@ streamlit run app.py         # 5. dashboard opens in your browser
 ⚠️ Don't run `run_all.py` again unless you want a fresh crawl: it takes ~1.5 h and builds a slightly
 different graph (see Limitations).
 
-Optional 5-second preview: `python run_all.py --mock` then `streamlit run app.py`
+Optional 5-second preview: `python run_all.py --mock` then `streamlit run app.py` and open http://localhost:8501
 (shows a MOCK DATA banner; the real run cleans the fake files up).
 
 What `run_all.py` does:
