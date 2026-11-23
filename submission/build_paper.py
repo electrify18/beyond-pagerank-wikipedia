@@ -78,8 +78,8 @@ st.paragraph_format.line_spacing = 1.0
 sec = doc.sections[0]
 sec.page_width, sec.page_height = Inches(8.5), Inches(11)
 sec.top_margin, sec.bottom_margin = Inches(0.75), Inches(1.0)
-sec.left_margin = sec.right_margin = Inches(0.625)
-COL_W, COL_GAP = 3.5, 0.25
+sec.left_margin = sec.right_margin = Inches(0.75)      # as measured in the reference paper
+COL_W, COL_GAP = 3.375, 0.25
 BODY_AFTER = 4          # pt between body paragraphs (the reference shows a small gap)
 
 
@@ -237,6 +237,7 @@ def table(title, rows, widths, align=None, size=9):
     _no_table_borders(t)
     _cell_margins(t, 0.02, 0.02, 0.05, 0.05)
     last = len(rows) - 1
+    widths = [w * COL_W / sum(widths) for w in widths]
     for r, row in enumerate(rows):
         for ci, v in enumerate(row):
             cell = t.cell(r, ci)
@@ -255,8 +256,8 @@ def table(title, rows, widths, align=None, size=9):
 
 # ------------------------------------------------------------------ title + author block (single column)
 p = para(align=WD_ALIGN_PARAGRAPH.CENTER, indent=False, after=10)
-add(p, "Beyond PageRank: Comparing Structural Importance with Actual Human Navigation on Wikipedia "
-       "(2026 FIFA World Cup)", size=24)
+add(p, "Beyond PageRank: Comparing Structural Importance\nwith Actual Human Navigation on Wikipedia\n"
+       "(2026 FIFA World Cup)", size=20)
 
 AUTHORS = [("Kshant Carvalho", AUTHOR_EMAIL), ("Prof. Ankita Amburle", None)]
 t = doc.add_table(rows=1, cols=2)
@@ -273,7 +274,7 @@ for ci, (name, email) in enumerate(AUTHORS):
                  "Mumbai, India"):
         q = cell.add_paragraph()
         q.alignment = WD_ALIGN_PARAGRAPH.CENTER
-        add(q, line, size=10, italic=True)
+        add(q, line, size=9, italic=True)
     if email:
         q = cell.add_paragraph()
         q.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -485,7 +486,7 @@ table(f"Models scored against {mname(TEST)}", [
      f3(IND["ndcg10_navigation"]), f3(IND["spearman_attention"])),
     ("Last month's clicks", f3(LAST["spearman_navigation"]), f"{LAST['top10_navigation']}/10",
      f3(LAST["ndcg10_navigation"]), f3(LAST["spearman_attention"])),
-], widths=[1.22, 0.5, 0.5, 0.73, 0.55], align=["L", "C", "C", "C", "C"])
+], widths=[1.1, 0.48, 0.52, 0.76, 0.45], align=["L", "C", "C", "C", "C"], size=8.5)
 para("“ρ nav.”, “Top-10” and “NDCG@10” use the navigation ground truth; “ρ all” uses all "
      f"{mshort(TEST)} traffic.")
 
