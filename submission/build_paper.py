@@ -278,7 +278,7 @@ for ci, (name, email) in enumerate(AUTHORS):
     if email:
         q = cell.add_paragraph()
         q.alignment = WD_ALIGN_PARAGRAPH.CENTER
-        add(q, email, size=10)
+        add(q, email, size=9)
 para(after=0, size=6).paragraph_format.line_spacing = Pt(8)
 
 # ------------------------------------------------------------------ two-column body
